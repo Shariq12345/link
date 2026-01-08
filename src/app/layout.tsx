@@ -6,12 +6,12 @@ import { ClerkProvider } from "@clerk/nextjs";
 import { dark } from "@clerk/themes";
 import ConvexClientProvider from "@/providers/ConvexClientProvider";
 
-const inter = Inter({
+const geist = Geist({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-geist",
 });
 
-const mono = IBM_Plex_Mono({
+const mono = Geist_Mono({
   subsets: ["latin"],
   weight: ["400", "600", "700"],
   variable: "--font-mono",
@@ -35,7 +35,7 @@ export default function RootLayout({
       }}
     >
       <html lang="en" suppressHydrationWarning>
-        <body className={`${inter.variable} ${mono.variable} antialiased`}>
+        <body className={`${geist.className} ${mono.variable} antialiased`}>
           <ClerkProvider>
             <ConvexClientProvider>{children}</ConvexClientProvider>
           </ClerkProvider>
