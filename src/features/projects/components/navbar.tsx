@@ -65,7 +65,7 @@ export const Navbar = ({ projectId }: { projectId: Id<"projects"> }) => {
               <BreadcrumbLink className="flex items-center gap-1.5" asChild>
                 <Button
                   variant={"ghost"}
-                  className="w-fit! p-1.5! h-7!"
+                  className="w-fit! p-1.5! h-7! hover:bg-gray-200"
                   asChild
                 >
                   <Link href={"/"}>

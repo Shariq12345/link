@@ -1,3 +1,4 @@
+import { Id } from "@/convex/_generated/dataModel";
 import { ProjectLayout } from "@/src/features/projects/components/project-layout";
 import React from "react";
 
@@ -6,7 +7,7 @@ const Layout = async ({
   params,
 }: {
   children: React.ReactNode;
-  params: Promise<{ projectId: string }>;
+  params: Promise<{ projectId: Id<"projects"> }>;
 }) => {
   const { projectId } = await params;
   return <ProjectLayout projectId={projectId}>{children}</ProjectLayout>;
