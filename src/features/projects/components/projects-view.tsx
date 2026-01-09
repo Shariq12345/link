@@ -73,7 +73,7 @@ export const ProjectsView = () => {
               >
                 <div className="flex items-center justify-between w-full">
                   <SparkleIcon className="size-4" />
-                  <Kbd className="bg-accent border rounded-none">⌘ N</Kbd>
+                  <Kbd className="border rounded-none">⌘ N</Kbd>
                 </div>
                 <div className="">
                   <span className="text-sm font-mono">New</span>
@@ -87,7 +87,7 @@ export const ProjectsView = () => {
               >
                 <div className="flex items-center justify-between w-full">
                   <FaGithub className="size-4" />
-                  <Kbd className="bg-accent border rounded-none">⌘ I</Kbd>
+                  <Kbd className="border rounded-none">⌘ I</Kbd>
                 </div>
                 <div className="">
                   <span className="text-sm font-mono">Import</span>

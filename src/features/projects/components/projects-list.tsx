@@ -20,20 +20,18 @@ const formatTimeStamp = (timestamp: number) => {
 
 const getProjectIcon = (project: Doc<"projects">) => {
   if (project.importStatus === "completed") {
-    return <FaGithub className="size-3.5 text-muted-foreground" />;
+    return <FaGithub className="size-3.5" />;
   }
 
   if (project.importStatus === "failed") {
-    return <AlertCircleIcon className="size-3.5 text-muted-foreground" />;
+    return <AlertCircleIcon className="size-3.5" />;
   }
 
   if (project.importStatus === "importing") {
-    return (
-      <Loader2Icon className="size-3.5 text-muted-foreground animate-spin" />
-    );
+    return <Loader2Icon className="size-3.5 animate-spin" />;
   }
 
-  return <GlobeIcon className="size-3.5 text-muted-foreground" />;
+  return <GlobeIcon className="size-3.5" />;
 };
 
 const ContinueCard = ({ data }: { data: Doc<"projects"> }) => {
@@ -53,11 +51,9 @@ const ContinueCard = ({ data }: { data: Doc<"projects"> }) => {
               {getProjectIcon(data)}
               <span className="font-medium truncate">{data.name}</span>
             </div>
-            <ArrowRightIcon className="size-4 text-muted-foreground group-hover:translate-x-0.5 transition-colors" />
+            <ArrowRightIcon className="size-4 group-hover:translate-x-0.5 transition-colors" />
           </div>
-          <span className="text-xs text-muted-foreground">
-            {formatTimeStamp(data.updatedAt)}
-          </span>
+          <span className="text-xs">{formatTimeStamp(data.updatedAt)}</span>
         </Link>
       </Button>
     </div>
@@ -107,7 +103,7 @@ export const ProjectsList = ({ onViewAll }: ProjectsListProps) => {
               onClick={onViewAll}
             >
               <span className="font-mono">View all</span>
-              <Kbd className="bg-accent border rounded-none font-mono">⌘ K</Kbd>
+              <Kbd className=" border rounded-none font-mono">⌘ K</Kbd>
             </button>
           </div>
           <ul className="flex flex-col">

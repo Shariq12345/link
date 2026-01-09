@@ -30,9 +30,11 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider
-      appearance={{
-        theme: dark,
-      }}
+      appearance={
+        {
+          // theme: dark,
+        }
+      }
     >
       <html lang="en" suppressHydrationWarning>
         <body className={`${geist.className} ${mono.variable} antialiased`}>
