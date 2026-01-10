@@ -29,13 +29,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider
-      appearance={
-        {
-          // theme: dark,
-        }
-      }
-    >
+    <ClerkProvider>
       <html lang="en" suppressHydrationWarning>
         <body className={`${geist.className} ${mono.variable} antialiased`}>
           <ClerkProvider>
