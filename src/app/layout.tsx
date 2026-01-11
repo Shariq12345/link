@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/ui/theme-provider";
 import { ClerkProvider } from "@clerk/nextjs";
 import { dark } from "@clerk/themes";
 import ConvexClientProvider from "@/providers/ConvexClientProvider";
+import { Toaster } from "@/components/ui/sonner";
 
 const geist = Geist({
   subsets: ["latin"],
@@ -33,7 +34,10 @@ export default function RootLayout({
       <html lang="en" suppressHydrationWarning>
         <body className={`${geist.className} ${mono.variable} antialiased`}>
           <ClerkProvider>
-            <ConvexClientProvider>{children}</ConvexClientProvider>
+            <ConvexClientProvider>
+              <Toaster />
+              {children}
+            </ConvexClientProvider>
           </ClerkProvider>
         </body>
       </html>

@@ -6,6 +6,8 @@ import { indentWithTab } from "@codemirror/commands";
 import { minimap } from "../extensions/minimap";
 import { indentationMarkers } from "@replit/codemirror-indentation-markers";
 import { customSetup } from "../extensions/custom-setup";
+import { vsCodeLight } from "@fsegurai/codemirror-theme-vscode-light";
+import { suggestion } from "../extensions/suggestion";
 
 interface Props {
   fileName: string;
@@ -36,6 +38,7 @@ export const CodeEditor = ({
         customTheme,
         customSetup,
         languageExtension,
+        suggestion(fileName),
         keymap.of([indentWithTab]),
         minimap(),
         indentationMarkers(),
@@ -44,6 +47,7 @@ export const CodeEditor = ({
             onChange(update.state.doc.toString());
           }
         }),
+        vsCodeLight,
       ],
     });
 
