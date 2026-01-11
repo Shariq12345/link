@@ -6,6 +6,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 import { dark } from "@clerk/themes";
 import ConvexClientProvider from "@/providers/ConvexClientProvider";
 import { Toaster } from "@/components/ui/sonner";
+import "allotment/dist/style.css";
 
 const geist = Geist({
   subsets: ["latin"],
